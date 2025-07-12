@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="Meat-Scripts">
+  <category name="GUI">
+    <reapack name="Meat-Script_GUI_FX_Modulated_Parameters.lua" type="script" desc="FX Modulated Parameters GUI">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 FX Modulated Parameters GUI\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This GUI displays all modulated parameters for the focused FX\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Last touched parameter is displayed for whatever parameter on whichever FX was last interacted with\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab When no FX has focus, script will display modulated parameters for the FX which was last interacted with.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab 'Open' displays the FX that was last interacted with.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Bottom window displays ALL plugins that have modulation applied within the active Reaper project\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_FX_Modulated_Parameters.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_GUI_Layout_Restoration.lua" type="script" desc="Layout Restoration">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Layout Restoration\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Store up to 10 project layouts. Top row saves, bottom row loads.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Layout_Restoration.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_GUI_Reaper_Item_Quick_Settings.lua" type="script" desc="Reaper Item Quick Settings GUI">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Reaper Item Quick Settings GUI\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Prerequisits:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab ReaImGui (cfillion)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Explorer Item Source Folder (Meat-Scripts)\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This GUI displays controls for each selected item\u8217's first take.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Settings that can be toggled between displayed/hidden:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Name, Volume, Pan, Pitch, Play Rate, Pitch Mode, and EQ.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab EQ parameter enables the application of basic EQ curves (high pass, low pass, band pass):\par}
+{\pard \ql \f0 \sa180 \li1080 \fi-360 \bullet \tx360\tab Dynamically adds/removes ReaEQ (named 'RS_EQ') to the end of the FX chain on the take.\par}
+{\pard \ql \f0 \sa180 \li1080 \fi-360 \bullet \tx360\tab Script supports moving the EQ instance wherever you want.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Always-displayed settings include:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Solo & Mute buttons: applies to the track of the media item.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Loop: sets timeline selection to the item, moves playhead to its start, enables 'Repeat'.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Rename: applies the text written in the 'Name' field to the take.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Source: opens windows explorer to the location of the audio file on the disk drive.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab FX: opens the FX window for the take.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Reverse: applies to the take.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Hold: keeps a given item in the GUI, regardless if it is selected or not.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.1" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <changelog><![CDATA[- Added global 'Reset' button which resets all visible numeric parameters.]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Reaper_Item_Quick_Settings.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_GUI_TrackRoutingManager.lua" type="script" desc="Track Routing Manager">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Lists every track that has at least one track-send.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Opens the respective I/O window when you press \u8220"I/O".\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Pressing 'Select' isolates those tracks in mix and track view\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Pressing 'Show All' unihdes all tracks in the project.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_TrackRoutingManager.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="Utility">
+    <reapack name="Meat-Script_CopySelectedTakeName_ToClipboard.lua" type="script" desc="Copy Selected Take Name to Clipboard">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Copy Selected Take Name to Clipboard\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Copies the active take name of a single selected media item to the system clipboard.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If no item is selected, or more than one item is selected, the script aborts with an error.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_CopySelectedTakeName_ToClipboard.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Explorer_Item_SourceFolder.lua" type="script" desc="Explorer Item Source Folder">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Explorer Item Source Folder\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Opens the OS file explorer for the folder(s) containing the source file(s).\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Explorer_Item_SourceFolder.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Hide_Tracks_Nested.lua" type="script" desc="Hide Tracks Nested">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Copy Selected Take Name to Clipboard\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Toggle visibility of nested tracks for any selected track; affects TCP and mixer.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If no tracks are selected, toggle visibility for all nested tracks.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Hide_Tracks_Nested.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Hide_Tracks_Unselected.lua" type="script" desc="Hide Tracks Unselected">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Hide Tracks Unselected\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Hides all unselected tracks in TCP and mixer\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab When nothing is selected, this script will unhide all tracks.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Hide_Tracks_Unselected.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Hide_Tracks_Without_Items_Within_Timeline_Selection.lua" type="script" desc="Hide Tracks Without Items Within Timeline Selection">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Hide Tracks Without Items Within Timeline Selection\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Hides tracks that do not have any media items overlapping the current time selection.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Tracks that do have overlapping items remain visible.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab For any visible track, all parent tracks in its hierarchy are also unhidden.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Hide_Tracks_Without_Items_Within_Timeline_Selection.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Hide_Unselected_Tracks_in_Mixer.lua" type="script" desc="Hide Unselected Tracks in Mixer">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Hide Unselected Tracks in Mixer\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Hides busses of unselected tracks in the mixer.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to bind this script and the existing action 'Track: Make all tracks visible in TCP and mixer' to Mouse Button 03 & 04.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Hide_Unselected_Tracks_in_Mixer.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Insert_Empty_Space_Between_Selected_Media_Items.lua" type="script" desc="Insert Silence Between Selected Media Items">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Insert Silence Between Selected Media Items\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab For each track with 2+ selected items, insert X seconds of silence between them.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab The leftmost item on each track stays anchored.\\\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Per track, NOT additive.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Insert_Empty_Space_Between_Selected_Media_Items.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Reaper_Project_Audit.lua" type="script" desc="Reaper Project Audit (WIP)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Reaper Project Audit (WIP)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab WIP. USE AT YOUR OWN DISCRETION\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="0.2" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <changelog><![CDATA[0.2 • Added Undo block, UI freeze, faster FX‑signature hashing,
+     safer offline‑file check, and "Copy report to clipboard" option.]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Reaper_Project_Audit.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Region_Renamer.lua" type="script" desc="Region Renamer">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Region Renamer\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Prompts user to define a name for all regions contained within a timeline selection.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to add to the 'Ruler/arrange context' menu.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Region_Renamer.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Remove_Empty_Space_Between_Selected_Media_Items.lua" type="script" desc="Remove Empty Space Between Selected Media Items">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Region Renamer\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Given a media item selection containing two or more items:\par}
+{\pard \ql \f0 \sa180 \li1080 \fi-360 \bullet \tx360\tab Moves all selected media items within each track to the left, snapping them together while keeping their order.\par}
+{\pard \ql \f0 \sa180 \li1080 \fi-360 \bullet \tx360\tab Uses the leftmost selected item per track as the anchor.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Remove_Empty_Space_Between_Selected_Media_Items.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Scroll_MediaItem_Next_Variation.lua" type="script" desc="Scroll Media Item to Next Variation">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Scroll Media Item to Next Variation\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Given an media item with several variations separated by silence, uses peak detection to modify start offset such that it 'scrolls' the next variation to the start of the media item.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Change 'ASK_USER' variable to 'true' if you want to be prompted for peak detection thresholds when the script runs.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended shortcut : CTRL+ALT+C\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Scroll_MediaItem_Next_Variation.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Search_For_Tracks_Containing_User_Defined_Text.lua" type="script" desc="Search For Tracks Containing User Defined Text">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Search For Tracks Containing User Defined Text\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Prompts for a text fragment (case-insensitive).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Tracks whose names contain the fragment are shown.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If a match is a folder parent, all of its descendants are shown.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If a match is a child track, every ancestor folder is shown.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Folders that must be visible are un-folded.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If no track matches, script aborts and shows an error.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Search_For_Tracks_Containing_User_Defined_Text.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Select_All_Items_Within_Timeline_Selection.lua" type="script" desc="Select All Items Within Timeline Selection">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Select All Items Within Timeline Selection\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Selects every media item that overlaps the current time selection.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended shortcut: 'CTRL+A'.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Select_All_Items_Within_Timeline_Selection.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="UX">
+    <reapack name="Meat-Script_Extend_RegionBounds_to_NearbyItems.lua" type="script" desc="Extend Region Bounds to Nearby Items">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Extend Region Bounds to Nearby Items\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Given a timeline selection that overlaps any region boundary, this script will extend the region(s) boundary or boundaries to the nearest item.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Useful when working with many variations, so you avoid having to manually extend the boundary to fit within the items you're playing.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to add this script to the 'Ruler/arrange context' menu.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Extend_RegionBounds_to_NearbyItems.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_NewTrack_Plus.lua" type="script" desc="New Track Plus">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 New Track Plus\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Creates a new track based on the {\b base name} of the {\b selected track} (or "TRACK" if nothing is selected).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If the selected track is a {\b folder}, the new track is placed {\b after all of that folder\u8217's children}, so the new one is at the same hierarchical level as the folder track.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If the selected track is a {\b child track}, the new track is placed {\b immediately after it}, preserving its {\b parent relationship}.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab The new track {\b inherits the color} of the selected track (if the selected track has a custom color).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab The newly created track is {\b auto-selected} after creation.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_NewTrack_Plus.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Render_MarkerSections_Within_Timeline_Selection.lua" type="script" desc="Render Marker Sections Within Timeline Selection">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Render Marker Sections Within Timeline Selection\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \bullet \tx360\tab 1.\tx360\tab Finds all normal markers in the current time selection.\sa180\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \bullet \tx360\tab 2.\tx360\tab Prompts user to open Render Settings and save them (bounding=Project regions, filename=$region, etc.).\sa180\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \bullet \tx360\tab 3.\tx360\tab Upon confirmation, creates a region for each chunk from marker i to marker i+1 (or sel_end if it\u8217's the last marker).\sa180\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \bullet \tx360\tab 4.\tx360\tab Calls "Render project, using the most recent render settings" (which the user just saved).\sa180\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \bullet \tx360\tab 5.\tx360\tab Deletes the newly-created regions, leaving your project as it was.\sa180\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Render_MarkerSections_Within_Timeline_Selection.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <metadata>
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Meat-Scripts ReaPack Repository\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Welcome to my ReaScripts Repo!\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 I made these scripts to improve my workflow as a sound designer.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 These tools are free and always will be.\line If they help your projects, please consider buying me a coffee to support the work :)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\field{\*\fldinst{HYPERLINK "https://www.paypal.com/donate/?hosted_button_id=AXUT8P8AWT85S"}}{\fldrslt{\ul
+{\cf1 [image: https://img.shields.io/badge/Buy%20me%20a%20coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black&style=for-the-badge]\cf0}
+}}}
+\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 If you have any feedback or suggestions for new scripts, {\field{\*\fldinst{HYPERLINK "mailto:jeremy.romberg@gmail.com"}}{\fldrslt{\ul
+contact me
+}}}
+!\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Cheers,\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Jeremy Romberg\sa180\par}
+}
+]]></description>
+  </metadata>
+</index>
