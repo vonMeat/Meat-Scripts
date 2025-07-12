@@ -1,0 +1,33 @@
+name: check
+on: [push]
+
+jobs:
+  reapack-index:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write        # so the job can push index.xml
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0        # need full history for commit
+
+    - run: sudo apt-get update && sudo apt-get install -y pandoc
+    - uses: ruby/setup-ruby@v1
+      with: { ruby-version: 3.2 }
+    - run: gem install --no-document reapack-index
+
+    - name: Refresh index.xml (amend + auto-commit)
+      run: |
+        set -e
+        git config user.name  "GitHub Actions"
+        git config user.email "actions@github.com"
+        # Re-generate just for the latest commit
+        reapack-index -s . --amend --commit -V
+        # If index.xml changed, commit & push it
+        git push
+
+    - name: Validate packages
+      run: reapack-index --check
