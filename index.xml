@@ -102,6 +102,25 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_CopySelectedTakeName_ToClipboard.lua</source>
       </version>
     </reapack>
+    <reapack name="Meat-Script_Explorer_Item_LibraryFolder.lua" type="script" desc="Explorer Item Library Folder">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Explorer Item Library Folder\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Given selected media item(s) this script opens OS explorer to its location(s) in the user provided sound library\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab First run with no saved library path: asks for the folder and saves it (ExtState).\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab New project: first time you run it, asks whether to keep or change the saved path.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If it's a 'glued' or renamed take, should still find the original if it exists in your Library; except if you glued a renamed take.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to add to the 'Media item context' menu.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-08-18T02:18:37Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Explorer_Item_LibraryFolder.lua</source>
+      </version>
+    </reapack>
     <reapack name="Meat-Script_Explorer_Item_SourceFolder.lua" type="script" desc="Explorer Item Source Folder">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -197,6 +216,46 @@
       </metadata>
       <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Insert_Empty_Space_Between_Selected_Media_Items.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Move_Selected_Items_to_Other_Selected_Track.lua" type="script" desc="Move Selected Items to Other Selected Track">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Move Selected Items to Other Selected Track\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Two-track mode: exactly two tracks selected; only one may contain selected items; moves those to the other.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Single-track mode: exactly one track selected; it must contain no selected items; moves all other selected items onto it.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Preserves timeline positions\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Script warns you if there will be overlaps in media items caused by the script on the new track.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended shortcut : '/'\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-08-18T02:18:37Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Move_Selected_Items_to_Other_Selected_Track.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Nuke_Timeline_Selection.lua" type="script" desc="Nuke Timeline Selection">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Nuke Timeline Selection\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Removes every object that intersects the active timeline selection:\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 \bullet \tx360\tab All Media-items\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 \bullet \tx360\tab All Project markers and regions that start or overlap inside the selection\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 \bullet \tx360\tab All envelope points (track envelopes + item/take envelopes)\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 \bullet \tx360\tab EVERYTHING\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 \bullet \tx360\tab The script is NON-RIPPLE (arrangement length is unchanged).\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 \bullet \tx360\tab Recommended to add to the 'Ruler/arrange context' menu.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-08-18T02:18:37Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Nuke_Timeline_Selection.lua</source>
       </version>
     </reapack>
     <reapack name="Meat-Script_Reaper_Project_Audit.lua" type="script" desc="Reaper Project Audit (WIP)">
