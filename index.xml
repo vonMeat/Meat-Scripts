@@ -136,6 +136,21 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Explorer_Item_SourceFolder.lua</source>
       </version>
     </reapack>
+    <reapack name="Meat-Script_Find_Identical_FX_with_Identical_Parameters.lua" type="script" desc="Find Identical FX with Identical Parameters">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Find Identical FX with Identical Parameters\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Scans the entire project for duplicate FX instances containing identical parameter values. Useful for optimizing mixing structure.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-09-04T03:17:45Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Find_Identical_FX_with_Identical_Parameters.lua</source>
+      </version>
+    </reapack>
     <reapack name="Meat-Script_Hide_Tracks_Nested.lua" type="script" desc="Hide Tracks Nested">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -468,6 +483,27 @@
       </metadata>
       <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Render_MarkerSections_Within_Timeline_Selection.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Space_SFX_Variations_by_Markers.lua" type="script" desc="Space SFX Variations by Markers">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Space SFX Variations by Markers\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Make a timeline selection of a set of markers where SFX variations may be overlapping (e.g. when producing foley)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Each marker inside the selection is considered a variation start.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Items belong to a variation if their START is inside that variation's boundary i.e. before the next marker.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab The last variation's right boundary = max end among all items that overlap the time selection.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Keeps the first variation anchored. For each next variation, inserts empty space defined by user padding value.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Rest of the project is pushed rightward relative to the amount of time added by the script operation.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Regions created for each variation for easy rendering. Naming based off user provided input (default 'SFX)\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-09-04T03:17:45Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Space_SFX_Variations_by_Markers.lua</source>
       </version>
     </reapack>
   </category>
