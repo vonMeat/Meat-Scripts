@@ -233,6 +233,23 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Insert_Empty_Space_Between_Selected_Media_Items.lua</source>
       </version>
     </reapack>
+    <reapack name="Meat-Script_Insert_Note_Item_Across_Time_Selection.lua" type="script" desc="Insert Note Item Across Time Selection">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Insert Note Item Across Time Selection\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Must have a single track selected and no existing items within the timeline selection\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Prompts for note, inserts note item containing provided text across timeline selection.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to add to 'Ruler/arrange context' menu\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-09-09T23:30:29Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Insert_Note_Item_Across_Time_Selection.lua</source>
+      </version>
+    </reapack>
     <reapack name="Meat-Script_Insert_X_Markers_Every_Y_Seconds.lua" type="script" desc="Insert X markers every Y seconds">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -426,6 +443,22 @@
       </metadata>
       <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Select_All_Items_Within_Timeline_Selection.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Swap_Media_Item_Positions.lua" type="script" desc="Swap Media Item Positions">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Swap Media Item Positions\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Swaps start position between two selected media items.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended shortcut: "ALT+["\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-09-09T23:30:29Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/Utility/Meat-Script_Swap_Media_Item_Positions.lua</source>
       </version>
     </reapack>
   </category>
