@@ -480,6 +480,41 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Extend_RegionBounds_to_NearbyItems.lua</source>
       </version>
     </reapack>
+    <reapack name="Meat-Script_Media_Item_Copy_Duration_and_Fades.lua" type="script" desc="Media Item Copy Duration and Fades">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Media Item Copy Duration and Fades\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Requires companion script 'Meat-Script_Media_Item_Paste_Duration_and_Fades.lua'.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Copies both duration and fades of a singular media item, which can later be pasted on other media items using the companion script.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended shortcut: SHIFT+ALT+C\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-09-24T03:41:44Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Media_Item_Copy_Duration_and_Fades.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Media_Item_Paste_Duration_and_Fades.lua" type="script" desc="Media Item Paste Duration and Fades">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Media Item Paste Duration and Fades\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Requires companion script 'Meat-Script_Media_Item_Copy_Duration_and_Fades.lua'.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Applies the copied duration and fades of a given media item. Can be applied to several media items at once.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Any splits are applied from the center of the item.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended shortcut: SHIFT+ALT+V\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-09-24T03:41:44Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Media_Item_Paste_Duration_and_Fades.lua</source>
+      </version>
+    </reapack>
     <reapack name="Meat-Script_NewTrack_Plus.lua" type="script" desc="New Track Plus">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
