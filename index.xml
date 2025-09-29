@@ -66,6 +66,11 @@
         <changelog><![CDATA[- Added global 'Reset' button which resets all visible numeric parameters.]]></changelog>
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Reaper_Item_Quick_Settings.lua</source>
       </version>
+      <version name="1.2" author="Jeremy Romberg" time="2025-09-29T20:28:21Z">
+        <changelog><![CDATA[- Fixed spacing for latest ReaImgui update. Requires ReaImgui 0.10.0.2 or later. ]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Reaper_Item_Quick_Settings.lua</source>
+        <source file="ProggyClean.ttf">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/ProggyClean.ttf</source>
+      </version>
     </reapack>
     <reapack name="Meat-Script_GUI_TrackRoutingManager.lua" type="script" desc="Track Routing Manager">
       <metadata>
