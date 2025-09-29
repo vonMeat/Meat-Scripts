@@ -1,7 +1,8 @@
 -- @provides
 --   [main] Meat-Script_GUI_Reaper_Item_Quick_Settings.lua
+--   [nomain] ProggyClean.ttf
 -- @description Reaper Item Quick Settings GUI
--- @version 1.1
+-- @version 1.2
 -- @author Jeremy Romberg
 -- @about
 --   ### Reaper Item Quick Settings GUI
@@ -27,7 +28,7 @@
 --   - Hold: keeps a given item in the GUI, regardless if it is selected or not.
 -- @extrequires ReaImGui
 -- @changelog
---   - Added global 'Reset' button which resets all visible numeric parameters.
+--   - Fixed spacing for latest ReaImgui update. Requires ReaImgui 0.10.0.2 or later. 
 
 -------------------------------------------------
 -- WINDOW SIZE CONSTANTS
@@ -89,7 +90,25 @@ if not reaper.ImGui_CreateContext then
   return
 end
 local ctx = reaper.ImGui_CreateContext("Reaper Item Quick Settings")
-local font = reaper.ImGui_CreateFont("sans-serif", 14)
+
+-- Load font
+local dir       = debug.getinfo(1,"S").source:match("@(.+)[/\\]") or ""
+local font_path = dir .. "/ProggyClean.ttf"
+local font      
+
+-- Support Older Imgui
+if reaper.ImGui_CreateFontFromFile then
+  -- Newer ReaImGui versions
+  font = reaper.ImGui_CreateFontFromFile(font_path)
+else
+  -- Older ReaImGui versions
+  font = reaper.ImGui_CreateFont("sans-serif", 14)
+end
+
+if not font then
+  r.ShowMessageBox("Failed to load ProggyClean.ttf", "Font error", 0)
+  return
+end
 reaper.ImGui_Attach(ctx, font)
 
 -- Project State Change for undo logic 
@@ -559,6 +578,10 @@ local function frame()
   end
   reaper.ImGui_SetNextWindowSize(ctx, winW, winH, reaper.ImGui_Cond_FirstUseEver())
 
+  -- Font set
+  reaper.ImGui_PushFont(ctx, font, 16)
+
+  -- Start
   local visible, open = reaper.ImGui_Begin(ctx, "Reaper Item Quick Settings", true, reaper.ImGui_WindowFlags_AlwaysAutoResize())
   if visible then
 
@@ -582,6 +605,8 @@ local function frame()
 
     if #displayedItems == 0 then
       reaper.ImGui_Text(ctx, "No items selected.")
+      -- Padding
+      reaper.ImGui_Dummy(ctx, 418, 0)
     else
       -- "Selected items: X"
       reaper.ImGui_Text(ctx, ("Selected items: %2d"):format(#displayedItems))
@@ -1144,6 +1169,9 @@ local function frame()
         reaper.ImGui_Separator(ctx)
       end
     end
+    
+    -- Cleanup IMGUI
+    reaper.ImGui_PopFont(ctx)
     reaper.ImGui_End(ctx)
   end
 
