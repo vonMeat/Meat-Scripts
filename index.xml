@@ -20,6 +20,25 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_FX_Modulated_Parameters.lua</source>
       </version>
     </reapack>
+    <reapack name="Meat-Script_GUI_Layout_Manager.lua" type="script" desc="Layout Manager GUI">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Layout Manager\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Save up to 20 named layouts; preserved per project.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Click + Add slot (bottom center) to create a new layout.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab 'Delete' button removes a saved layout from the list.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab 'Show All' button unhides any hidden tracks from TCP and MCP view.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Use text field at the top and select 'Filter Tracks' to show only tracks containing the filtered text.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-10-01T03:02:04Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Layout_Manager.lua</source>
+      </version>
+    </reapack>
     <reapack name="Meat-Script_GUI_Layout_Restoration.lua" type="script" desc="Layout Restoration">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
