@@ -2,7 +2,7 @@
 --   [main] Meat-Script_GUI_Reaper_Item_Quick_Settings.lua
 --   [nomain] ProggyClean.ttf
 -- @description Reaper Item Quick Settings GUI
--- @version 1.2
+-- @version 1.3
 -- @author Jeremy Romberg
 -- @about
 --   ### Reaper Item Quick Settings GUI
@@ -28,7 +28,7 @@
 --   - Hold: keeps a given item in the GUI, regardless if it is selected or not.
 -- @extrequires ReaImGui
 -- @changelog
---   - Fixed spacing for latest ReaImgui update. Requires ReaImgui 0.10.0.2 or later. 
+--   - Fixed crash related to PushFont
 
 -------------------------------------------------
 -- WINDOW SIZE CONSTANTS
@@ -579,11 +579,20 @@ local function frame()
   reaper.ImGui_SetNextWindowSize(ctx, winW, winH, reaper.ImGui_Cond_FirstUseEver())
 
   -- Font set
-  reaper.ImGui_PushFont(ctx, font, 16)
+  --reaper.ImGui_PushFont(ctx, font, 16)
+  
+  -- Push font only when visible
+  local font_pushed = false
+  do
+    local ok = pcall(reaper.ImGui_PushFont, ctx, font, 16)
+    if ok then font_pushed = true end
+  end
 
   -- Start
   local visible, open = reaper.ImGui_Begin(ctx, "Reaper Item Quick Settings", true, reaper.ImGui_WindowFlags_AlwaysAutoResize())
   if visible then
+  
+    
 
     -- Show/hide toggles
     reaper.ImGui_Text(ctx, "Show/hide:")
@@ -1171,7 +1180,10 @@ local function frame()
     end
     
     -- Cleanup IMGUI
-    reaper.ImGui_PopFont(ctx)
+    -- Pop only if font pushed
+    if font_pushed then
+      reaper.ImGui_PopFont(ctx)
+    end
     reaper.ImGui_End(ctx)
   end
 
