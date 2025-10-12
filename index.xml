@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Meat-Scripts">
   <category name="GUI">
     <reapack name="Meat-Script_GUI_FX_Modulated_Parameters.lua" type="script" desc="FX Modulated Parameters GUI">
@@ -41,6 +41,34 @@
       </metadata>
       <version name="1.0" author="Jeremy Romberg" time="2025-10-01T03:02:04Z">
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Layout_Manager.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_GUI_MIDI_Voice_Generator.lua" type="script" desc="MIDI Voice Generator GUI">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 MIDI Voice Generator GUI\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Generate complex MIDI patterns with up to 8 independent voices. Useful for creating arpeggios, rhythmic patterns, and evolving sequences.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Setup\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Create a track and set your VST instrument.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Arm track for recording.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3.\tx360\tab Set input to: MIDI > Virtual MIDI Keyboard > Channel 1 (or All Channels)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 4.\tx360\tab Configure voices in the GUI\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 5.\tx360\tab Hit Record in REAPER to capture MIDI output\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Modes:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \u8226 ? Automatic: Continuous playback (use Play/Stop buttons) \u8226 ? MIDI Trigger: Playback follows your MIDI keyboard input\par}
+{\pard \ql \f0 \sa180 \li1440 \fi0 Select MIDI device from dropdown first\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Features:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \u8226 ? Per-voice controls: Note, Velocity, Sustain %, Rate \u8226 ? Real-time transpose (overridden in MIDI Trigger mode)\line \u8226 ? BPM sync with project tempo \u8226 ? Randomization with individual toggles \u8226 ? Save and Load presets (also remembers settings per project)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Notes:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Track must remain armed during playback. Edit 'VOICE_COUNT' variable below if you want more than 8 voices. Warning: untested.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-10-12T15:25:20Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_MIDI_Voice_Generator.lua</source>
       </version>
     </reapack>
     <reapack name="Meat-Script_GUI_Reaper_Item_Quick_Settings.lua" type="script" desc="Reaper Item Quick Settings GUI">
