@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Meat-Scripts">
   <category name="GUI">
     <reapack name="Meat-Script_GUI_FX_Modulated_Parameters.lua" type="script" desc="FX Modulated Parameters GUI">
@@ -41,21 +41,6 @@
       </metadata>
       <version name="1.0" author="Jeremy Romberg" time="2025-10-01T03:02:04Z">
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Layout_Manager.lua</source>
-      </version>
-    </reapack>
-    <reapack name="Meat-Script_GUI_Layout_Restoration.lua" type="script" desc="Layout Restoration">
-      <metadata>
-        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
-{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
-\widowctrl\hyphauto
-
-{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Layout Restoration\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Store up to 10 project layouts. Top row saves, bottom row loads.\sa180\par}
-}
-]]></description>
-      </metadata>
-      <version name="1.0" author="Jeremy Romberg" time="2025-07-12T15:46:36Z">
-        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Layout_Restoration.lua</source>
       </version>
     </reapack>
     <reapack name="Meat-Script_GUI_Reaper_Item_Quick_Settings.lua" type="script" desc="Reaper Item Quick Settings GUI">
