@@ -2,7 +2,7 @@
 --   [main] Meat-Script_GUI_Reaper_Item_Quick_Settings.lua
 --   [nomain] ProggyClean.ttf
 -- @description Reaper Item Quick Settings GUI
--- @version 1.3
+-- @version 1.4
 -- @author Jeremy Romberg
 -- @about
 --   ### Reaper Item Quick Settings GUI
@@ -28,7 +28,7 @@
 --   - Hold: keeps a given item in the GUI, regardless if it is selected or not.
 -- @extrequires ReaImGui
 -- @changelog
---   - Fixed crash related to PushFont
+--   - Fixed another crash related to PushFont
 
 -------------------------------------------------
 -- WINDOW SIZE CONSTANTS
@@ -1178,14 +1178,14 @@ local function frame()
         reaper.ImGui_Separator(ctx)
       end
     end
-    
-    -- Cleanup IMGUI
-    -- Pop only if font pushed
-    if font_pushed then
-      reaper.ImGui_PopFont(ctx)
-    end
-    reaper.ImGui_End(ctx)
   end
+
+  -- Cleanup IMGUI
+    -- Pop only if font pushed
+  if font_pushed then
+    reaper.ImGui_PopFont(ctx)
+  end
+  reaper.ImGui_End(ctx)
 
   -- Spacebar => transport
   if reaper.ImGui_IsKeyPressed(ctx, reaper.ImGui_Key_Space()) and not reaper.ImGui_IsAnyItemActive(ctx) then
