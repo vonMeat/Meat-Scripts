@@ -112,6 +112,11 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Reaper_Item_Quick_Settings.lua</source>
         <source file="ProggyClean.ttf">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/ProggyClean.ttf</source>
       </version>
+      <version name="1.4" author="Jeremy Romberg" time="2025-10-24T21:02:45Z">
+        <changelog><![CDATA[- Fixed another crash related to PushFont]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/Meat-Script_GUI_Reaper_Item_Quick_Settings.lua</source>
+        <source file="ProggyClean.ttf">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/GUI/ProggyClean.ttf</source>
+      </version>
     </reapack>
     <reapack name="Meat-Script_GUI_TrackRoutingManager.lua" type="script" desc="Track Routing Manager">
       <metadata>
