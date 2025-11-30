@@ -677,6 +677,33 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Space_SFX_Variations_by_Markers.lua</source>
       </version>
     </reapack>
+    <reapack name="Meat-Script_Toggle_Auto_Track_Renamer.lua" type="script" desc="Toggle: Auto Track Renamer">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Toggle: Auto Track Renamer\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 While enabled, continuously renames tracks using names of media items contained within.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Track naming is based on the following rules:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Parent track has no media items: 'TRACK_EMPTY'\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab If parent track or any of its children has media items:\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab If any media item is a video file (.mp4, .mov, etc), base name is "!REF_VISUAL".\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Else gathers all words within media items on the track; any media items on parent track have word priority.\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Two most frequent words become the base name for the parent track.\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab All children/sub-children are named numerically sequentially.\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3.\tx360\tab Empty Item override:\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab If ANY track has an Empty Item with text, that track becomes its own base group:\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab That track's name is the Empty Item text (uppercased), with no numeric suffix.\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Its children inherit that base and are numbered in sequentially.\sa180\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 TIPS : -> Use '!' ahead of the track name to lock it from being renamed by the script. -> Use the variables below 'ignore_words' and 'prefer_words' to tailer the naming preferences to your liking.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-11-30T23:42:21Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Toggle_Auto_Track_Renamer.lua</source>
+      </version>
+    </reapack>
     <reapack name="Meat-Script_Toggle_ShowOnly_SelectedTracks_in_Mixer.lua" type="script" desc="Toggle: Show Only Selected Tracks in Mixer">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
