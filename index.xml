@@ -531,6 +531,22 @@
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Extend_RegionBounds_to_NearbyItems.lua</source>
       </version>
     </reapack>
+    <reapack name="Meat-Script_Make_Selected_Tracks_Children_of_Top_Selected_Track.lua" type="script" desc="Make Selected Tracks Children of Top Selected Track">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Make Selected Tracks Children of Top Selected Track\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Existing hierarchy of any moved track (its own children) is preserved.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Does nothing if the tracks are already direct children of the top-most track.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-11-30T18:37:58Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Make_Selected_Tracks_Children_of_Top_Selected_Track.lua</source>
+      </version>
+    </reapack>
     <reapack name="Meat-Script_Media_Item_Copy_Duration_and_Fades.lua" type="script" desc="Media Item Copy Duration and Fades">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
@@ -564,6 +580,42 @@
       </metadata>
       <version name="1.0" author="Jeremy Romberg" time="2025-09-24T03:41:44Z">
         <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Media_Item_Paste_Duration_and_Fades.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Move_Selected_Tracks_Down_Track_Hierarchy.lua" type="script" desc="Move Selected Tracks Down Track Hierarchy">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Move Selected Tracks Down Track Hierarchy\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to install both this script and 'Move Selected Tracks Up Track Hierarchy'.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to assign a shortcut key.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Moves and selected number of tracks down one lane.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Will move into or out of parents tracks when being moved down.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-11-30T18:37:58Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Move_Selected_Tracks_Down_Track_Hierarchy.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Meat-Script_Move_Selected_Tracks_Up_Track_Hierarchy.lua" type="script" desc="Move Selected Tracks Up Track Hierarchy">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Move Selected Tracks Up Track Hierarchy\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to install both this script and 'Move Selected Tracks Up Track Hierarchy'.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Recommended to assign a shortcut key.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Moves and selected number of tracks up one lane.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Will move into or out of parents tracks when being moved up.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Jeremy Romberg" time="2025-11-30T18:37:58Z">
+        <source main="main">https://raw.githubusercontent.com/vonMeat/Meat-Scripts/master/UX/Meat-Script_Move_Selected_Tracks_Up_Track_Hierarchy.lua</source>
       </version>
     </reapack>
     <reapack name="Meat-Script_NewTrack_Plus.lua" type="script" desc="New Track Plus">
