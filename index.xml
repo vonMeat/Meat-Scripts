@@ -691,12 +691,15 @@
 {\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab If any media item is a video file (.mp4, .mov, etc), base name is "!REF_VISUAL".\par}
 {\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Else gathers all words within media items on the track; any media items on parent track have word priority.\par}
 {\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Two most frequent words become the base name for the parent track.\par}
-{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab All children/sub-children are named numerically sequentially.\sa180\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab All children/sub-children inherit the base name and are numbered sequentially.\sa180\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 3.\tx360\tab Empty Item override:\par}
-{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab If ANY track has an Empty Item with text, that track becomes its own base group:\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab If any track has an Empty Item with text, that track becomes its own base group:\par}
 {\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab That track's name is the Empty Item text (uppercased), with no numeric suffix.\par}
-{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Its children inherit that base and are numbered in sequentially.\sa180\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 TIPS : -> Use '!' ahead of the track name to lock it from being renamed by the script. -> Use the variables below 'ignore_words' and 'prefer_words' to tailer the naming preferences to your liking.\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Its children inherit that base and are numbered sequentially.\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 4.\tx360\tab "!" override:\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Add "!" ahead of any track name to force the base name.\par}
+{\pard \ql \f0 \sa0 \li720 \fi-360 \endash \tx360\tab Overrides all other naming rules.\sa180\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 TIPS : -> Use the variables below 'ignore_words' and 'prefer_words' to tailer the naming preferences to your liking.\par}
 }
 ]]></description>
       </metadata>
