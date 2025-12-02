@@ -13,14 +13,16 @@
 --      - If any media item is a video file (.mp4, .mov, etc), base name is "!REF_VISUAL".
 --      - Else gathers all words within media items on the track; any media items on parent track have word priority.
 --      - Two most frequent words become the base name for the parent track.
---      - All children/sub-children are named numerically sequentially.
+--      - All children/sub-children inherit the base name and are numbered sequentially.
 --   3. Empty Item override:
---      - If ANY track has an Empty Item with text, that track becomes its own base group:
+--      - If any track has an Empty Item with text, that track becomes its own base group:
 --      - That track's name is the Empty Item text (uppercased), with no numeric suffix.
---      - Its children inherit that base and are numbered in sequentially.
+--      - Its children inherit that base and are numbered sequentially.
+--   4. "!" override: 
+--      - Add "!" ahead of any track name to force the base name.
+--      - Overrides all other naming rules.
 --
 --   TIPS :
---   -> Use '!' ahead of the track name to lock it from being renamed by the script. 
 --   -> Use the variables below 'ignore_words' and 'prefer_words' to tailer the naming preferences to your liking.
 
 --   Recommended to add to a custom toolbar via toolbar docker.
@@ -29,6 +31,8 @@
 --   
 --   WARNING : If you accidentally enabled the script and want to undo 
 --             FIRST disable the script before undoing, or old names may be overwritten.
+-- @changelog
+--   - Improve functionality of track naming overrides.
 
 local r = reaper
 
@@ -38,13 +42,15 @@ local r = reaper
 
 -- Words to ignore completely when building base names (case-insensitive)
 -- Example: { "the", "and", "of", "fx" }
-local ignore_words = {
+local ignore_words = {"DTCK", "glued", "CECK", "GP", "SFX", "CFCK", "CC", "CK", "CH", "CK", "CREK", "UEDS", "DS", 
+"MLCK", "CRAFT", "HRCK", "CREK", "SOUNDDESIGN", "SOUND", "DESIGN", "MECH", "MECK", "MBCK", "MEDS",
+"DBDS", "BOOM", "DBCK", "by", "the", "and", "of", "fx", "IMM"
   -- "the", "and", "of", "fx"
 }
 
 -- Words to prefer when there is a tie in frequency (case-insensitive)
 -- Example: { "impact", "whoosh", "hit" }
-local prefer_words = {
+local prefer_words = {"AMB", "CLOTH", "IMPACT", "WHOOSH", "KICK", "SWEETENER", "METAL", "RING"
   -- "impact", "whoosh", "hit"
 }
 
@@ -131,6 +137,15 @@ local function is_locked(track)
 
     -- Any other name starting with "!" is considered locked
     return name:sub(1,1) == "!"
+end
+
+-- Return the base name for a locked track (strip leading "!")
+local function locked_base_name(track)
+  local ok, nm = reaper.GetSetMediaTrackInfo_String(track, "P_NAME", "", false)
+  if not ok or not nm or nm == "" then return nil end
+  if nm:sub(1,1) ~= "!" then return nil end
+  -- "!REF_VISUAL" is not considered locked by is_locked(), so no special case here
+  return nm:sub(2)
 end
 
 -------------------------------------------------------
@@ -462,7 +477,14 @@ local function assign_bases_and_owners(roots, nodes_by_track)
   local function propagate_from_root(root)
     local base
 
-    if root.empty_base then
+    local locked       = is_locked(root.track)
+    local locked_base  = locked_base_name(root.track)
+
+    if locked and locked_base and locked_base ~= "" then
+      -- Locked parent: always use its own name (without the "!") as base,
+      -- ignoring Empty Items or media-derived bases.
+      base = locked_base
+    elseif root.empty_base then
       -- Root has its own Empty Item text
       base = root.empty_base
     else
@@ -495,13 +517,21 @@ local function assign_bases_and_owners(roots, nodes_by_track)
       end
     end
 
+
     root.base  = base
     root.owner = root
 
     local function recurse(node)
       for _, child in ipairs(node.children) do
-        if child.empty_base then
-          -- Empty Item override: new base group
+        local child_locked      = is_locked(child.track)
+        local child_locked_base = child_locked and locked_base_name(child.track) or nil
+
+        if child_locked and child_locked_base and child_locked_base ~= "" then
+          -- Locked child: becomes its own base group, using its own name (without "!")
+          child.base  = child_locked_base
+          child.owner = child
+        elseif child.empty_base then
+          -- Empty Item override: new base group (only for UNLOCKED tracks)
           child.base  = child.empty_base
           child.owner = child
         else
@@ -509,6 +539,7 @@ local function assign_bases_and_owners(roots, nodes_by_track)
           child.base  = node.base
           child.owner = node.owner
         end
+
         recurse(child)
       end
     end
